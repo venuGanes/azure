@@ -15,9 +15,8 @@ User has been created and has been named as "az104-user1"
 
 ![Alt text](https://github.com/venuGanes/azure/blob/3e4d9f26f8fb60aea2ccb2e97ff26d5d9019acb2/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.2%20user%20details.png)
 
-```sh
+
 Invite an external user has been created and has been named as "venu"
-```
 
 Configuration as below:
 
@@ -29,7 +28,7 @@ Result after creation, received via outlook
 
 ![Alt text](https://github.com/venuGanes/azure/blob/6848d50e25a3d86609c0427f4122f579d873ef74/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.32%20invitation%20message.png)
 
-## 1)  Create groups and add members
+## 2)  Create groups and add members
 
 For this task, we create a group account named " IT Lab Administrator". And  we'll add the member/user and the guest user to the group as shown below:
 ![Alt text](https://github.com/venuGanes/azure/blob/b6ef40b3d5fa69088d8e9ba90eace27d8fbc4a4d/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.41%20group%20created.png)
