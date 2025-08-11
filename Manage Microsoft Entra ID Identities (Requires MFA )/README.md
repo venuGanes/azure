@@ -7,7 +7,7 @@ My organization is setting up a new training environment for onboarding new soft
 
 # Objective
 - [x] Create and configure user accounts
-- [x]Create groups and add members
+  [x]Create groups and add members
 
 ## 1) Create and configure user accounts
  
