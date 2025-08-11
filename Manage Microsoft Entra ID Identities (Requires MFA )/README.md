@@ -9,8 +9,9 @@ My organization is setting up a new training environment for onboarding new soft
 1) Create and configure user accounts
 2) Create groups and add members
 
-# 1) Create and configure user accounts
+## 1) Create and configure user accounts
  
 User has been created and has been named as "az104-user1"
 
 ![Alt text](https://github.com/venuGanes/azure/blob/3e4d9f26f8fb60aea2ccb2e97ff26d5d9019acb2/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.2%20user%20details.png)
+
