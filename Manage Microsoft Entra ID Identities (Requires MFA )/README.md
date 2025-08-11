@@ -9,6 +9,9 @@ My organization is setting up a new training environment for onboarding new soft
 - [x] Create and configure user accounts
 - [x]Create groups and add members
 
+- [x] Add Changelog
+- [x] Add back to top links
+
 ## 1) Create and configure user accounts
  
 User has been created and has been named as "az104-user1"
