@@ -49,7 +49,7 @@ Review after role assignment:
 
 In this task, I've created a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment.
 
-The image below shows a custom role being created with specific permissions excluded. These exclusions are necessary because Azure resource providerscollections of REST API operations that enable various Azure services (like managing storage or virtual machines) grant powerful capabilities. Since the Help Desk team does not require such access, these permissions are intentionally removed during the role cloning process to maintain proper security and limit unnecessary control.
+The image below shows a custom role being created with specific permissions excluded. These exclusions are necessary because Azure resource providers collections of REST API operations that enable various Azure services (like managing storage or virtual machines) grant powerful capabilities. Since the Help Desk team does not require such access, these permissions are intentionally removed during the role cloning process to maintain proper security and limit unnecessary control.
 
 ![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/7.1%20task%203.png)
 
