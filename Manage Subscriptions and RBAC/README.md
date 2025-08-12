@@ -10,7 +10,7 @@ Granting permissions to submit support requests for all subscriptions in the man
 - [x] Create support request tickets 
 
 # Architecture Diagram
-
+![Alt text](https://github.com/venuGanes/azure/blob/3175824e654315657f845250c250d6916b7050a0/Manage%20Subscriptions%20and%20RBAC/3.%20arch%20diagram%201.png)
 
 # Objective
 
