@@ -14,33 +14,51 @@ Granting permissions to submit support requests for all subscriptions in the man
 
 # Objective
 
-- [x] Create and configure user accounts
-- [x] Create groups and add members
+- [x] Implement management groups
+- [x] Review and assign a built-in Azure role
+- [x] Create a custom RBAC role
+- [x] Monitor role assignments with the Activity log.
 
-## 1) Create and configure user accounts
+## 1) Implement management groups
  
-User has been created and has been named as "az104-user1"
+In this task, I was responsible for creating and configuring management groups in Azure. These groups help organize and segment subscriptions logically, making it easier to apply role-based access control (RBAC) and Azure Policies. By using management groups, I can assign permissions and policies that automatically apply to all associated subscriptions. For instance, in a scenario where a support team needs access to multiple subscriptions (like in Europe), grouping those under a single management group simplifies access without needing to configure each subscription individually. In my case, this setup allows the Help Desk team to create support requests across all subscriptions efficiently.
 
-![Alt text](https://github.com/venuGanes/azure/blob/3e4d9f26f8fb60aea2ccb2e97ff26d5d9019acb2/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.2%20user%20details.png)
+Created management group as such:
 
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/5.create%20management%20group.png)
 
-Invite an external user has been created and has been named as "venu"
+After creation:
 
-Configuration as below:
-
-![Alt text](https://github.com/venuGanes/azure/blob/6848d50e25a3d86609c0427f4122f579d873ef74/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.31%20invite%20external%20user.png)
-
-![Alt text](https://github.com/venuGanes/azure/blob/6848d50e25a3d86609c0427f4122f579d873ef74/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.32%20invite%20external%20user.png)
-
-Result after creation, received via outlook
-
-![Alt text](https://github.com/venuGanes/azure/blob/6848d50e25a3d86609c0427f4122f579d873ef74/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.32%20invitation%20message.png)
-
-## 2)  Create groups and add members
-
-For this task, we create a group account named " IT Lab Administrator". And  we'll add the member/user and the guest user to the group as shown below:
-![Alt text](https://github.com/venuGanes/azure/blob/b6ef40b3d5fa69088d8e9ba90eace27d8fbc4a4d/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.41%20group%20created.png)
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/5.1%20create%20management%20group.png)
 
 
-![Alt text](https://github.com/venuGanes/azure/blob/b6ef40b3d5fa69088d8e9ba90eace27d8fbc4a4d/Manage%20Microsoft%20Entra%20ID%20Identities%20(Requires%20MFA%20)/4.4%20adding%20member%20to%20group.png)
+## 2) Review and assign a built-in Azure role
 
+In this task, we'll review the built-in roles and assign the VM Contributor role to a member of the Help Desk. The VM contributor role lets us manage virtual machines but not access the OS or manage the virtual network and storage account they are connected to.
+
+The below image shows the member of Helpdesh IT has been assigned under the role of Helpdesk IT
+
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/6.1%20task%202%20add%20role%20assignment.png)
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/6.2%20task%202%20select%20member.png)
+
+Review after role assignment:
+
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/6.3%20task%202%20CREATED.png)
+
+## 3) Create a custom RBAC role
+
+In this task, I've created a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment.
+
+The image below shows a custom role being created with specific permissions excluded. These exclusions are necessary because Azure resource providers—collections of REST API operations that enable various Azure services (like managing storage or virtual machines) grant powerful capabilities. Since the Help Desk team does not require such access, these permissions are intentionally removed during the role cloning process to maintain proper security and limit unnecessary control.
+
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/7.1%20task%203.png)
+
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/7.%20task%203%20CONT%201%20permission.png)
+
+## 4)  Monitor role assignments with the Activity log
+
+In this task, we view the activity log to determine if anyone has created a new role.
+
+We've locatde to the "Az104-mg153731133' resource and selected the activity log as below shows the result:
+
+![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/8.1%20task%204%20.png)
