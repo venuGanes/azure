@@ -45,10 +45,9 @@ In this task, we will assign the built-in Require a tag and its value on the res
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.1%20selecting%20policy%20defiintion.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.2%20definition%20selecting%20policy%20defiintion.png)
 
-The following task we'll assign the policy by selecting the appropriate tag vallue and resource group.
+In the following task we'll assign the policy by selecting the appropriate tag value and resource group.
 
-![Alt text]
-(https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.3%20Assign%20policy%20selecting%20resource%20group.png)
+![Alt text](https://github.com/venuGanes/azure/blob/36fb31f6f74f8d16aecba217653777ac978d730f/Manage%20Governance%20via%20Azure%20Policy/2.3%20Assign%20policy%20selecting%20resource%20group.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.4%20Assign%20policy%20selecting%20set%20parameters%20for%20tag.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.5%20Review.png)
 
