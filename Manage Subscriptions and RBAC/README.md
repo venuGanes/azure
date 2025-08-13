@@ -23,7 +23,7 @@ Granting permissions to submit support requests for all subscriptions in the man
  
 In this task, I was responsible for creating and configuring management groups in Azure. These groups help organize and segment subscriptions logically, making it easier to apply role-based access control (RBAC) and Azure Policies. By using management groups, I can assign permissions and policies that automatically apply to all associated subscriptions. For instance, in a scenario where a support team needs access to multiple subscriptions (like in Europe), grouping those under a single management group simplifies access without needing to configure each subscription individually. In my case, this setup allows the Help Desk team to create support requests across all subscriptions efficiently.
 
-Created management group as such:
+Created a management group as such:
 
 ![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/5.create%20management%20group.png)
 
@@ -36,7 +36,7 @@ After creation:
 
 In this task, we'll review the built-in roles and assign the VM Contributor role to a member of the Help Desk. The VM contributor role lets us manage virtual machines but not access the OS or manage the virtual network and storage account they are connected to.
 
-The below image shows the member of Helpdesh IT has been assigned under the role of Helpdesk IT
+The below image shows the member of Helpdesk IT has been assigned under the role of Helpdesk IT
 
 ![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/6.1%20task%202%20add%20role%20assignment.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/6.2%20task%202%20select%20member.png)
@@ -59,6 +59,6 @@ The image below shows a custom role being created with specific permissions excl
 
 In this task, we view the activity log to determine if anyone has created a new role.
 
-We've locatde to the "Az104-mg153731133' resource and selected the activity log as below shows the result:
+We've located to the "Az104-mg153731133' resource and selected the activity log as shown below shows the result:
 
 ![Alt text](https://github.com/venuGanes/azure/blob/2bc6de069a1ae75ae27c435f4a9722a0cea60a8b/Manage%20Subscriptions%20and%20RBAC/8.1%20task%204%20.png)
