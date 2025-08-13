@@ -40,7 +40,7 @@ After creation:
 
 In this task, we will assign the built-in Require a tag and its value on the resources policy to the resource group and evaluate the outcome. Azure Policy can be used to enforce configuration, and in this case, governance, to your Azure resources.
 
-##### At the beginning of this task we've selected a policy called "Require a tag and its value on resources" that Enforces a required tag and its value and Does not apply to the resources group
+##### At the beginning of this task we've selected a policy called "Require a tag and its value on resources" that enforces a required tag and its value and does not apply to the resources group
 
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.1%20selecting%20policy%20defiintion.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/fe55a5100a2b6b23501258d904c618bab33e24f9/Manage%20Governance%20via%20Azure%20Policy/2.2%20definition%20selecting%20policy%20defiintion.png)
@@ -62,20 +62,34 @@ Lastly, we'll create a storage account
 In this task, we will use the new policy definition to remediate any non-compliant resources. In this scenario, we will make any child 
 resources of a resource group inherit the Cost Center tag that was defined on the resource group.
 
-![Alt text]()
+In this task we'll delete the previous policy and select another policy "Inherit a tag from the resource group if missing"
 
-![Alt text]()
-![Alt text]()
-![Alt text]()
-![Alt text]()
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/3.%201%20Delete%20assignment.png)
+
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/3.%202%20Assign%20policy.png)
+
+
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/3.%202%20Assign%20policy%20cont.png)
+
+Review of assign policy created:
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/3.%202%20Assign%20policy%20cont%20created.png)
+
+Next, we've created the storage account with auto assigned cost center tag value.
+
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/3.%203%20creating%20storage%20account%20with%20auto%20assigned%20cost%20center.png)
 
 
 ## 4)  Use resource locks to protect configured resources
 
 In this task, we configure and test a resource lock. Locks prevent either deletions or modifications of a resource.
-![Alt text]()
-![Alt text]()
-![Alt text]()
+
+Image below show the lock was created:
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.1%20Add%20locks.png)
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.1%20Add%20locks%20added.png)
+
+Image below shows we're unable to detele resource group as it is locked:
+
+![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.2%20unable%20to%20detele%20resource%20group%20as%20it%20is%20locked.png)
 
 
 
