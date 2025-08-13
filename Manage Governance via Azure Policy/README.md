@@ -21,7 +21,6 @@ Your organization's cloud footprint has expanded significantly over the last yea
 - [x]Task 2: Enforce tagging via an Azure Policy.
 - [x]Task 3: Apply tagging via an Azure Policy.
 - [x]Task 4: Configure and test resource locks.
-- 
 
 ## 1) Apply resource tags to attach important metadata to Azure resources
  
