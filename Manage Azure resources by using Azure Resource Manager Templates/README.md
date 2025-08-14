@@ -43,34 +43,41 @@ Once we've made the changes, notice that two disk files are created.
 
 In this task, we work with the Azure Cloud Shell and Azure PowerShell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way we work, either Bash or PowerShell. In this task, we use PowerShell to deploy a template.
 
-The imaege below shows that we're using the classic version of the powershell.
+The image below shows that we're using the classic version of PowerShell.
 ![Alt text](https://github.com/venuGanes/azure/blob/a223a3ec95b9c0b9a82bb0d92cc53a22e0d9e14c/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/3.2%20upload%20both%20downloaded%20templates.png)
 
 The image below shows the template that is being edited in order to deploy.
 ![Alt text](https://github.com/venuGanes/azure/blob/a223a3ec95b9c0b9a82bb0d92cc53a22e0d9e14c/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/3.3%20editing%20templat%20files.png)
 
-Once we've saved the changes made o the template, we'll proceed with deploying it as below:
+Once we've saved the changes made to the template, we'll proceed with deploying it as below:
 ![Alt text](https://github.com/venuGanes/azure/blob/a223a3ec95b9c0b9a82bb0d92cc53a22e0d9e14c/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/3.4%20deeploying%20resource%20group.png)
 
-In order to confirm if the disk was created we'll use the command "Get-AzDisk" as below:
+To confirm if the disk was created, we'll use the command "Get-AzDisk" as below:
 ![Alt text](https://github.com/venuGanes/azure/blob/a223a3ec95b9c0b9a82bb0d92cc53a22e0d9e14c/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/3.5%20deployment%20succeeded.png)
 
 
 
 ## 4) Deploy a template with the CLI.
 
+The image below shows that we're using Bash.
+![Alt text](https://github.com/venuGanes/azure/blob/4acf35abcccb160d04f03485aa67b804a3ddf482/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/4.2%20editing%20and%20deploying%20in%20bash.png)
 
+The image below shows the template that is being edited in order to deploy.
+![Alt text](https://github.com/venuGanes/azure/blob/4acf35abcccb160d04f03485aa67b804a3ddf482/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/4.2%20editing%20and%20deploying%20in%20bash.png)
 
-Image below show the lock was created:
-![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.1%20Add%20locks.png)
-![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.1%20Add%20locks%20added.png)
-
-Image below shows we're unable to detele resource group as it is locked:
-
-![Alt text](https://github.com/venuGanes/azure/blob/a919c83a7f301bdba4b5928ab30a8c800c9eabc3/Manage%20Governance%20via%20Azure%20Policy/4.2%20unable%20to%20detele%20resource%20group%20as%20it%20is%20locked.png)
+Once we've saved the changes made to the template, we'll proceed with deploying it as below:
+![Alt text](https://github.com/venuGanes/azure/blob/4acf35abcccb160d04f03485aa67b804a3ddf482/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/4.3%20using%20cli%20deployment%20scceeded.png)
 
 
 ## 5) Deploy a resource by using Azure Bicep.
 
 In this task, we will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
+
+The image below shows the bicep template being edited in order to deploy.
+
+![Alt text](https://github.com/venuGanes/azure/blob/4acf35abcccb160d04f03485aa67b804a3ddf482/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/5.1%20Editing%20the%20Bicep%20file.png)
+
+Once we've saved the changes made to the template, we'll proceed with deploying it as below:
+![Alt text](https://github.com/venuGanes/azure/blob/4acf35abcccb160d04f03485aa67b804a3ddf482/Manage%20Azure%20resources%20by%20using%20Azure%20Resource%20Manager%20Templates/5.2%20Deployment%20succeeded.png)
+
 
