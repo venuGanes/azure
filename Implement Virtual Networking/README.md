@@ -14,10 +14,10 @@ Let's create these virtual networks and subnets to lay the foundation for our ne
 
 # Objective
 
-- [x]Task 1: Create a virtual network with subnets using the portal.
-- [x]Task 2: Create a virtual network and subnets using a template.
-- [x]Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
-- [x]Task 4: Configure public and private Azure DNS zones.
+- [x] Task 1: Create a virtual network with subnets using the portal.
+- [x] Task 2: Create a virtual network and subnets using a template.
+- [x] Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
+- [x] Task 4: Configure public and private Azure DNS zones.
 
 ## 1) Create a virtual network with subnets using the portal.
  
