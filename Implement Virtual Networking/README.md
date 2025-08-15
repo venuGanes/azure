@@ -84,7 +84,7 @@ Configure an inbound security rule to allow ASG traffic
 
 Configure an outbound NSG rule that denies Internet access
 ![Alt text](https://github.com/venuGanes/azure/blob/8674789eb1b277e1df6d3084614b10800610a32c/Implement%20Virtual%20Networking/3.4%20add%20outboubd%20rule.png)
-![Alt text](https://github.com/venuGanes/azure/blob/8674789eb1b277e1df6d3084614b10800610a32c/Implement%20Virtual%20Networking/3.3%20add%20inbound%20rule%20cont.png)
+![Alt text](https://github.com/venuGanes/azure/blob/4e621b67ab4cc9f416c26970e90180eb663c1fb5/Implement%20Virtual%20Networking/3.4%20add%20outboubd%20rule%20cont.png)
 ![Alt text](https://github.com/venuGanes/azure/blob/8674789eb1b277e1df6d3084614b10800610a32c/Implement%20Virtual%20Networking/3.4%20add%20outboubd%20rule%20cont%201.png)
 
 
