@@ -1,88 +1,37 @@
 # Lab scenario
 
-The organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. 
-However, in some scenarios, apps and services in the core area need to communicate with those in the manufacturing area. 
-In this lab, you configure connectivity between the segmented areas.
-This is a common scenario for separating production from development or separating one subsidiary from another.
+Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing an Azure Load Balancer and an Azure Application Gateway. All resources are in the same region.
 
 # Architecture Diagram
-![Alt text](https://github.com/venuGanes/azure/blob/8b20d047e70141ea6a653ee771bcf69f76d607d7/6.%20Implement%20Intersite%20Connectivity/arch%20diagram%20new.png)
+![Alt text]()
 
 # Objective
 
-- [x] Task 1: Create a virtual machine in a virtual network.
-- [x] Task 2: Create a virtual machine in a different virtual network.
-- [x] Task 3: Use Network Watcher to test the connection between virtual machines.
-- [x] Task 4: Configure virtual network peerings between different virtual networks.
-- [x] Task 5: Use Azure PowerShell to test the connection between virtual machines.
-- [x] Task 6: Create a custom route.
+- [x] Task 1: Use a template to provision an infrastructure.
+- [x] Task 2: Configure an Azure Load Balancer.
+- [x] Task 3: Configure an Azure Application Gateway.
 
-## 1) Create a virtual machine in a virtual network.
- 
-In this task, we create a core services virtual network with a virtual machine.
+## 1) Use a template to provision an infrastructure.
+ In this task, you will use a template to deploy one virtual network, one network security group, and three virtual machines.
 
-The image below shows the configuration of the virtual machine named CoreServicesVM.
 
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/1.1%20create%20VM.png)
+![Alt text]()
 
-Next, the image shows the configuration of the virtual network named CoreServicesVnet and also the subnet specified below.
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/1.2%20CONFIGURE%20VIRTUAL%20NETWORK.png)
+![Alt text]()
 
 
 
-## 2)  Create a virtual machine in a different virtual network.
-
-In this task, we create a manufacturing services virtual network with a virtual machine.
-
-The image below shows the configuration of the virtual machine named ManufacturingVM and named the vnet as ManufacturingVnet.
-
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/2.1%20create%20vm%20in%20another%20virtual%20network.png)
-
-Also the subnets have been createad as below:
-
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/2.2%20conf%20vnet%20subnet.png)
-
-## 3) Use Network Watcher to test the connection between virtual machines
-
-In this task, we verify that resources in peered virtual networks can communicate with each other. 
-Network Watcher will be used to test the connection. Before continuing, we have to ensure both virtual machines have been deployed and are running.
-
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/3.1%20network%20watcher%20connection%20t.shoot%20source%20type%20.png)
-
-## 4) Configure virtual network peerings between different virtual networks.
-
-In this task, we create a virtual network peering to enable communications between resources in the virtual networks.
-
-Images below shows that both the virtual networks has beenn peered with each other.
-
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/4.1%20peering%20corevnet%20to%20manvnet%20cont.png)
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/4.1%20peering%20corevnet%20to%20manvnet.png)
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/4.2%20connected.png)
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/4.2%20manvnet%20peering.png)
-## 5) Use Azure PowerShell to test the connection between virtual machines.
-In this task, we retest the connection between the virtual machines in different virtual networks.
-
-##### Verify the private IP address of the CoreServicesVM
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/5.1%20verify%20priv%20ip%20add.png)
-##### Test the connection to the CoreServicesVM from the ManufacturingVM.
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/5.2%20run%20script%20to%20test%20connection.png)
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/5.2%20output.png)
+## 2)  Configure an Azure Load Balancer.
+In this task, you implement an Azure Load Balancer in front of the two Azure virtual machines in the virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
 
 
-## 6) Create a custom route.
+![Alt text]()
+Add a rule to determine how incoming traffic is distributed
 
-In this task, we want to control network traffic between the perimeter subnet and the internal core services subnet. 
-A virtual network appliance will be installed in the core services subnet and all traffic should be routed there.
+![Alt text]()
 
-First we'll add subnets to CoreServicesVnet
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/6.1%20add%20subnet%20to%20coreservicesvnet.png)
+## 3) Configure an Azure Application Gateway.
+In this task, you implement an Azure Application Gateway in front of two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway routes images to one virtual machine and videos to the other virtual machine.
 
-Next, create the route table
-![Alt text][(](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/6.2%20create%20routetable.png))
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/6.3%20add%20route.png)
+![Alt text]()
 
-The route has been added as shown below:
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/6.3%20routeadded.png)
-
-and we'll associate it
-![Alt text](https://github.com/venuGanes/azure/blob/4b20c99d551140686f2233e8acec1846513530bf/6.%20Implement%20Intersite%20Connectivity/6.4%20associate%20subnet.png)
