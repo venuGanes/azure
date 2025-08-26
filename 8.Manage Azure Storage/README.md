@@ -32,19 +32,24 @@ In this task, we will create a blob container and upload an image. Blob containe
 
 ##### 2.1 Create a blob container and a time-based retention policy
 
-Here, we'll add a container named data 
+Here, we'll add a container named data with a data policy type of Time-based retention which is set to 180 days. With a time-based retention policy, users can set policies to store data for a specified interval. When a time-based retention policy is set, objects can be created and read, but not modified or deleted. After the retention period has expired, objects can be deleted but not overwritten.
 
 ![Alt text](https://github.com/venuGanes/azure/blob/af339442aa44344b1a97e8c26732fa8653b7e245/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img.png)
-![Alt text]()
+![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.2%20Immutable%20blob%20storage.png)
 
 ##### 2.2 Manage blob uploads
 
-![Alt text]()
+In this task, we'll upload the blob/file and access tier is set to Hot (A tier optimized for storing data that is accessed or modified frequently. And also it'll be uploaded to a folder named security test
+
+![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3%20upload%20blob.png)
 ![Alt text]()
 ##### 2.3 Configure limited access to the blob storage
 
+First, we'll select the Genrate SAS option available next to the file we uploaded and set the permission to read and save it. After that, once we've saved it we'll be able to see the "Generate SAS token and URL" and copy the "Blob SAS URL" and paste it to the browser, we'll be able to see the content of the file. 
+![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.1%20image%20uploaded%20to%20foled%20security%20test.png)
+![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.2%20generate%20sas%20to%20view%20the%20file%20created.png)
+![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.3%20generate%20sas%20url.png)
 
-![Alt text]()
 ## 3) Create and configure secure Azure file storage.
 
 In this task, we will create and configure Azure File shares. we will use Storage Browser to manage the file share.
