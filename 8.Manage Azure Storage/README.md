@@ -25,7 +25,7 @@ Next, we'll create a rule for the storage
 ![Alt text](https://github.com/venuGanes/azure/blob/af339442aa44344b1a97e8c26732fa8653b7e245/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img%201st.png)
 
 ![Alt text]
-(https://github.com/venuGanes/azure/blob/af339442aa44344b1a97e8c26732fa8653b7e245/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img%201st.png)
+(https://github.com/venuGanes/azure/blob/07f100fa14a6ed69634a9dc3d226143c3b0ede3b/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img%20created.png)
 
 ## 2) Create and configure secure blob storage.
 
