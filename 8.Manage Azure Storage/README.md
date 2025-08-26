@@ -54,12 +54,19 @@ First, we'll select the Genrate SAS option available next to the file we uploade
 
 In this task, we will create and configure Azure File shares. we will use Storage Browser to manage the file share.
 
-![Alt text]()
-
 ##### 3.1 Create the file share and upload a file
-![Alt text]()
+
+In this task we'll create a share file with the name "Share1"
+
+![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.1%20create%20file%20share.png)
+![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.1.1%20file%20share%20cereated.png)
+
 ##### 3.2 Explore Storage Browser and upload a file
 
-![Alt text]()
+Next, we have to select the Storage Browser (a portal which allows us to view all the storage services under our account) and select the sthe "share1" , add directory and upload a file.
+
 ##### 3.3 Restrict network access to the storage account
-![Alt text]()
+
+Lastly, we'll create a virtual network with and name it" vnet1". For the service endpoints will select tbe "Microsoft.Storage". Next we'll add the created "vnet1" under the public network access and also select default subnet and save the changes. We'll delete the machine IP address as the allowed traffic should only come from the virtual network.
+
+![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.3.3%20image%20summary%20not%20authorized.png)
