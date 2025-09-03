@@ -3,7 +3,7 @@
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
 # Architecture Diagram
-![Alt text](https://github.com/venuGanes/azure/blob/f62f71a3b59ab040ff634ad0b6836229f00b0980/8.Manage%20Azure%20Storage/arch%20diagram%201.png)
+![Alt text]()
 
 # Objective
 
