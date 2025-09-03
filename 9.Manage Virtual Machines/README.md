@@ -1,73 +1,52 @@
 # Lab scenario
 
-The organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. 
-We would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. 
-We also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication.
-Finally, we want to determine to what extent Azure Files is suitable for hosting on-premises file shares.
+Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
 # Architecture Diagram
 ![Alt text](https://github.com/venuGanes/azure/blob/f62f71a3b59ab040ff634ad0b6836229f00b0980/8.Manage%20Azure%20Storage/arch%20diagram%201.png)
 
 # Objective
-- [x]Task 1: Create and configure a storage account.
-- [x]Task 2: Create and configure secure blob storage.
-- [x]Task 3: Create and configure secure Azure file storage.
 
-## 1) Create and configure a storage account.
+- [x]Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
+- [x]Task 2: Manage compute and storage scaling for virtual machines.
+- [x]Task 3: Create and configure Azure Virtual Machine Scale Sets.
+- [x]Task 4: Scale Azure Virtual Machine Scale Sets.
+- [x]Task 5: Create a virtual machine using Azure PowerShell (optional 1).
+- [x]Task 6: Create a virtual machine using the CLI (optional 2).
+- 
+## 1) Deploy zone-resilient Azure virtual machines by using the Azure portal
  
-In this task, we will create and configure a storage account. The storage account will use geo-redundant storage and will not have public access.
+In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-![Alt text](https://github.com/venuGanes/azure/blob/f62f71a3b59ab040ff634ad0b6836229f00b0980/8.Manage%20Azure%20Storage/1.1%20creating%20storage%20account.png)
+![Alt text]
 
-Next, we'll create a rule for the storage
+## 2) Manage compute and storage scaling for virtual machines
 
-##### Create a rule name movetocool
-![Alt text](https://github.com/venuGanes/azure/blob/af339442aa44344b1a97e8c26732fa8653b7e245/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img%201st.png)
+In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-![Alt text](https://github.com/venuGanes/azure/blob/07f100fa14a6ed69634a9dc3d226143c3b0ede3b/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img%20created.png)
-
-## 2) Create and configure secure blob storage.
-
-In this task, we will create a blob container and upload an image. Blob containers are directory-like structures that store unstructured data.
-
-##### 2.1 Create a blob container and a time-based retention policy
+##### 2.1 Azure Virtual Machine Scale Sets Architecture Diagram
 
 Here, we'll add a container named data with a data policy type of Time-based retention which is set to 180 days. With a time-based retention policy, users can set policies to store data for a specified interval. When a time-based retention policy is set, objects can be created and read, but not modified or deleted. After the retention period has expired, objects can be deleted but not overwritten.
 
-![Alt text](https://github.com/venuGanes/azure/blob/af339442aa44344b1a97e8c26732fa8653b7e245/8.Manage%20Azure%20Storage/2.1%20task%202%20%20cont%20img.png)
-![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.2%20Immutable%20blob%20storage.png)
+![Alt text]
 
-##### 2.2 Manage blob uploads
+##### 2.2 Azure Virtual Machine Scale Sets Architecture Diagram
 
-In this task, we'll upload the blob/file and access tier is set to Hot (A tier optimized for storing data that is accessed or modified frequently. And also it'll be uploaded to a folder named security test
+###### Scale out rule
 
-![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3%20upload%20blob.png)
-![Alt text]()
-##### 2.3 Configure limited access to the blob storage
+###### Scale in rule
 
-First, we'll select the Genrate SAS option available next to the file we uploaded and set the permission to read and save it. After that, once we've saved it we'll be able to see the "Generate SAS token and URL" and copy the "Blob SAS URL" and paste it to the browser, we'll be able to see the content of the file. 
-![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.1%20image%20uploaded%20to%20foled%20security%20test.png)
-![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.2%20generate%20sas%20to%20view%20the%20file%20created.png)
-![Alt text](https://github.com/venuGanes/azure/blob/8141524fbfe3fdc31c37653e5d759b65c25e5ed5/8.Manage%20Azure%20Storage/2.3.3%20generate%20sas%20url.png)
 
-## 3) Create and configure secure Azure file storage.
+###### Set the instance limits
 
-In this task, we will create and configure Azure File shares. we will use Storage Browser to manage the file share.
 
-##### 3.1 Create the file share and upload a file
+## 3) Create and configure Azure Virtual Machine Scale Sets
 
-In this task we'll create a share file with the name "Share1"
+In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
-![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.1%20create%20file%20share.png)
-![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.1.1%20file%20share%20cereated.png)
+## 4) Create a virtual machine using Azure PowerShell (option 1)
 
-##### 3.2 Explore Storage Browser and upload a file
+In this task, you scale the virtual machine scale set using a custom scale rule.
 
-Next, we have to select the Storage Browser (a portal which allows us to view all the storage services under our account) and select the sthe "share1" , add directory and upload a file.
-
-##### 3.3 Restrict network access to the storage account
-
-Lastly, we'll create a virtual network with and name it" vnet1". For the service endpoints will select tbe "Microsoft.Storage". Next we'll add the created "vnet1" under the public network access and also select default subnet and save the changes. We'll delete the machine IP address as the allowed traffic should only come from the virtual network.
-
-![Alt text](https://github.com/venuGanes/azure/blob/b95244287542169a244433e454a431f48edd5608/8.Manage%20Azure%20Storage/3.3.3%20image%20summary%20not%20authorized.png)
+## 5) Create a virtual machine using the CLI (option 2)
 
