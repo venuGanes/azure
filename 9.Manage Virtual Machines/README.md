@@ -13,7 +13,7 @@ Your organization wants to explore deploying and configuring Azure virtual machi
 - [x]Task 4: Scale Azure Virtual Machine Scale Sets.
 - [x]Task 5: Create a virtual machine using Azure PowerShell (optional 1).
 - [x]Task 6: Create a virtual machine using the CLI (optional 2).
-- 
+
 ## 1) Deploy zone-resilient Azure virtual machines by using the Azure portal
  
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
@@ -23,7 +23,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 ## 2) Manage compute and storage scaling for virtual machines
 
-In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
+In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adapt a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the disk's performance or increase its allocated capacity.
+
+![Alt text](https://github.com/venuGanes/azure/blob/4aef4ef405e8418428a119eed5aa1287869c9af6/9.Manage%20Virtual%20Machines/2.1%20IMG.png)
 
 ##### 2.1 Azure Virtual Machine Scale Sets Architecture Diagram
 
@@ -32,7 +34,7 @@ Here, we'll add a container named data with a data policy type of Time-based ret
 ##### 2.2 Azure Virtual Machine Scale Sets Architecture Diagram
 ![Alt text](https://github.com/venuGanes/azure/blob/2f968e598c8030c27a54b03570ef6416c9138059/9.Manage%20Virtual%20Machines/task%202%20diagram.png)
 ###### Scale out rule
-![Alt text]()
+![Alt text](https://github.com/venuGanes/azure/blob/bf1d82dfff1b2a4a4efe7908d0ce9d327f54663e/9.Manage%20Virtual%20Machines/4.1%20cont%20scale%20out%20rule%20img.png)
 ###### Scale in rule
 ![Alt text]()
 
