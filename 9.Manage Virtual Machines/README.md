@@ -3,7 +3,7 @@
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
 # Architecture Diagram
-![Alt text]()
+![Alt text](https://github.com/venuGanes/azure/blob/62b51f38e787fc9e59f7c6ff45f391f539ec0a21/9.Manage%20Virtual%20Machines/arch%20diagram.png)
 
 # Objective
 
@@ -18,7 +18,8 @@ Your organization wants to explore deploying and configuring Azure virtual machi
  
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-![Alt text]
+![Alt text](https://github.com/venuGanes/azure/blob/2f968e598c8030c27a54b03570ef6416c9138059/9.Manage%20Virtual%20Machines/1.1%20task%203%20snapshot.png)
+
 
 ## 2) Manage compute and storage scaling for virtual machines
 
@@ -28,25 +29,18 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 Here, we'll add a container named data with a data policy type of Time-based retention which is set to 180 days. With a time-based retention policy, users can set policies to store data for a specified interval. When a time-based retention policy is set, objects can be created and read, but not modified or deleted. After the retention period has expired, objects can be deleted but not overwritten.
 
-![Alt text]
-
 ##### 2.2 Azure Virtual Machine Scale Sets Architecture Diagram
-
+![Alt text](https://github.com/venuGanes/azure/blob/2f968e598c8030c27a54b03570ef6416c9138059/9.Manage%20Virtual%20Machines/task%202%20diagram.png)
 ###### Scale out rule
-
+![Alt text]()
 ###### Scale in rule
-
+![Alt text]()
 
 ###### Set the instance limits
-
+![Alt text]()
 
 ## 3) Create and configure Azure Virtual Machine Scale Sets
 
-In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
+In this task, we will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in, or scale out.
 
-## 4) Create a virtual machine using Azure PowerShell (option 1)
-
-In this task, you scale the virtual machine scale set using a custom scale rule.
-
-## 5) Create a virtual machine using the CLI (option 2)
 
