@@ -1,49 +1,38 @@
 # Lab scenario
 
-In this lab, you learn about Azure web apps. You learn to configure a web app to display a Hello World application in an external GitHub repository. 
-You learn to create a staging slot and swap with the production slot. You also learn about autoscaling to accommodate demand changes.
-
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
-
-Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. 
-The hardware is nearing end-of-life and will soon need to be replaced. Your organization wants to avoid new hardware costs by using Azure to host the websites.
+The organization has a web application that runs on a virtual machine in the on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. We decide to evaluate Azure Container Instances and Docker.
 
 # Architecture Diagram
-![Alt text]()
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/arch%20diagram.png)
 
 # Objective
 
-- [x]Task 1: Create and configure an Azure web app.
-- [x]Task 2: Create and configure a deployment slot.
-- [x]Task 3: Configure web app deployment settings.
-- [x]Task 4: Swap deployment slots.
-- [x]Task 5: Configure and test autoscaling of the Azure web app.
-- 
-## 1) Create and configure an Azure web app.
+- [x]Task 1: Deploy an Azure Container Instance using a Docker image.
+- [x]Task 2: Test and verify deployment of an Azure Container Instance.
+
+## 1) Deploy an Azure Container Instance using a Docker image.
  
-In this task, you create an Azure web app. Azure App Services is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. 
-Azure web apps is part Azure App Services hosting most runtime environments, such as PHP, Java, and .NET. The app service plan that you select determines the web app compute, storage, and features.
+In this task, we will create a simple web application using a Docker image. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for the container image..
 
-![Alt text]()
+First, we'll create the container instance by giving in name and uploading the docker image
 
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/1.1%20create%20container%20instanc.png)
 
-## 2) Create and configure a deployment slot.
+Next, we'll create the dns label
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/1.1.1%20dns%20label.png)
 
-In this task, you will create a staging deployment slot. Deployment slots enable you to perform testing prior to making your app available to the public (or your end users). 
-After you have performed testing, you can swap the slot from development or staging to production. Many organizations use slots to perform pre-production testing. 
-Additionally, many organizations run multiple slots for every application (for example, development, QA, test, and production).
+The image below shows the result of the container that was created
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/1.1.2%20container%20name.png)
 
-![Alt text]()
+## 2) Test and verify deployment of an Azure Container Instance.
 
-## 3) Configure web app deployment settings
+In this task, we review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, we can navigate to the container using the DNS name that you provided in the previous task.
 
-In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
+Once container created we'll copy the FQDN below
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.1%20copy%20FQDN%20url.png)
 
-## 4) Swap deployment slots.
-In this task, you will swap the staging slot with the production slot. Swapping a slot allows you to use the code that you have tested in your staging slot, and move it to production. 
-The Azure portal will also prompt you if you need to move other application settings that you have customized for the slot. 
-Swapping slots is a common task for application teams and application support teams, especially those deploying routine app updates and bug fixes.
+Next, we'll paste the URL to the browser
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.2%20fqdn%20url%20result.png)
 
-## 5) Configure and test autoscaling of the Azure web app.
-In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases.
-To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
+Finally, we’ll check the logs once the browser is refreshed.
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.3%20view%20logs.png)
