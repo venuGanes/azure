@@ -1,0 +1,51 @@
+# Lab scenario
+
+The organization has migrated their infrastructure to Azure. 
+It is important that Administrators are notified of any significant infrastructure changes. We plan to examine the capabilities of Azure Monitor, including Log Analytics.
+
+# Architecture Diagram
+![Alt text](
+
+# Objective
+
+- [x]Task 1: Use a template to provision an infrastructure.
+- [x]Task 2: Create an alert.
+- [x]Task 3: Configure action group notifications.
+- [x]Task 4: Trigger an alert and confirm it is working.
+- [x]Task 5: Configure an alert processing rule.
+- [x]Task 6: Use Azure Monitor log queries.
+
+## 1) Use a template to provision an infrastructure.
+ 
+In this task, we will create a simple web application using a Docker image. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for the container image..
+
+First, we'll create the container instance by giving in name and uploading the docker image
+
+![Alt text]()
+
+Next, we'll create the dns label
+![Alt text]()
+
+The image below shows the result of the container that was created
+![Alt text]()
+
+###### Configure Azure Monitor for virtual machines (this will be used in the last task)
+
+## 2) Create an alert.
+
+In this task, we review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, we can navigate to the container using the DNS name that you provided in the previous task.
+
+Once container created we'll copy the FQDN below
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.1%20copy%20FQDN%20url.png)
+
+Next, we'll paste the URL to the browser
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.2%20fqdn%20url%20result.png)
+
+Finally, we’ll check the logs once the browser is refreshed.
+![Alt text](https://github.com/venuGanes/azure/blob/0631d220643c125d392b370b7e7b84da645ee6fe/11.%20Implement%20Azure%20Container%20Instances/2.2.3%20view%20logs.png)
+
+## 3) Configure action group notifications.
+## 4) Trigger an alert and confirm it is working.
+## 5) Configure an alert processing rule.
+## 6) Use Azure Monitor log queries.
+
